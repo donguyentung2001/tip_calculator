@@ -46,19 +46,21 @@ function one_calculate(name,amount,tip) {
 }
 
 calculate_button.addEventListener("click",function() { 
-    if (receipt>1) { 
-        receipt=1;
-        for (let k=1 ; k < person; k++) {
-            let clas="result"+ k;
-            document.getElementById(clas).outerHTML="";
+    receipt=1;
+    for (let k=1 ; k <= person; k++) {
+        let clas="result"+ k;
+        if (document.getElementById(clas)) {
+        document.getElementById(clas).outerHTML="";
         }
     }
+
     for (let i=1 ; i<=person ; i++) { 
         name_para=".name" + i; 
         amount_para=".amount" + i; 
         tip_para=".tip" + i;
         one_calculate(name_para,amount_para,tip_para);
     }
+    last_person=person;
 })
 
 
