@@ -24,3 +24,8 @@ button:hover {
     font-size:17px;
     box-shadow: initial;
 }
+
+button:focus { 
+    outline:none;
+}
+
