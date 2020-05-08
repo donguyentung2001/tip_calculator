@@ -16,6 +16,7 @@ add_person.addEventListener('click',function() {
     new_amount.className="amount" + person; 
     new_tip.type="number";
     new_tip.className="tip" + person;
+    new_tip.value=document.querySelector(".tip1").value;
     new_name.type="text"; 
     new_name.className="name"+person;
     new_para.style.whiteSpace="pre"
